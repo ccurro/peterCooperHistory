@@ -5,7 +5,11 @@
 \usepackage{hanging}
 \usepackage[paperwidth=8.5in,paperheight=11in,left=0.5in,right=0.5in,top=0.3in,bottom=0.5in]{geometry}
 \usepackage{fontspec}
-\setmainfont{Gibbs Book}[VerticalPosition=Ordinal,Ligatures={TeX,Common}]
+\defaultfontfeatures{VerticalPosition=Ordinal,Ligatures={TeX,Common,Rare},Contextuals={Alternate}}
+\setmainfont{Gibbs Book}
+\newfontface\mdseries{Gibbs Medium}
+\newfontface\bdseries{Gibbs Bold}
+\newfontface\bkseries{Gibbs Black}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
@@ -13,13 +17,13 @@
 \usepackage{enumitem}
 
 \newlist{enumList}{enumerate}{1}
-\setlist[enumList]{label=\fontspec{Gibbs Bold}\arabic*.}
+\setlist[enumList]{label=\bdseries\arabic*.}
 
-\renewcommand{\refname}{\scshape \fontsize{16pt}{16pt}\selectfont \fontspec
-{Gibbs Bold} References}
+\renewcommand{\refname}{\scshape \fontsize{16pt}{16pt}\selectfont \fontspec{Gibbs Bold} References}
 \begin{document}
 \centering
-\fontspec{Gibbs Bold}[Letters=Uppercase]
+\fontspec{Gibbs Bold}
+\addfontfeatures{Letters=Uppercase}
 \fontsize{0.8in}{0.6in}\selectfont
 \scshape 
 \addfontfeature{LetterSpace=0.0} Peter Cooper \\
@@ -30,60 +34,59 @@
 \fontsize{16pt}{16pt}\selectfont
 \fontspec{Gibbs Black}
 \justify
-Facts %:
+Facts
 
 \vspace{0.1in}
 
 \begin{minipage}[t]{0.46\linewidth}
-\fontspec{Gibbs Book}[VerticalPosition=Ordinal,Ligatures={Common,TeX}]
+\fontspec{Gibbs Book}
 \fontsize{10.7pt}{12.7pt}\selectfont
 \raggedright
 \upshape
 \begin{enumList}
 
 \item Date of Birth: Feb. 12th, 1791 (Exactly 18 years prior to the birth of
-{\fontspec{Gibbs Medium} Abraham Lincoln})
+{\mdseries Abraham Lincoln})
 
 \item Date of Death: Apr. 4th, 1883 (14~years after the death of his wife
-{\fontspec{Gibbs Medium} Sarah Cooper})
+{\mdseries Sarah Cooper})
 
-\item He received {\fontspec{Gibbs Medium} very little formal education}. In his
-own words he said he had
-only ``some three or four quarters'' at a public school and that ``there were no
-night schools or laboratories nor any means by which an apprentice boy could get
-information.''
+\item He received {\mdseries very little formal education}. In his own words
+he said he had only ``some three or four quarters'' at a public school and
+that ``there were no night schools or laboratories nor any means by which an
+apprentice boy could get information.''
 
 \item His father was a hatter; on his work for his father he said ``I
 remember\ldots being set to pull the hair out of rabbit skins, when {\fontspec
 {Gibbs Medium} my head was just above the table}.''
 
 \item On the risk he took at age 17: ``The only time I ever trusted to chance
-for a profit\ldots I got a very wholesome lesson. I had earned about 10 dollars
-beyond my immediate wants, which I invested, by the advice of a relative in
-lottery tickets, all which, fortunately for me, drew blanks. This impressed
-upon me the {\fontspec{Gibbs Medium} folly of looking to games of chance} for any
+for a profit\ldots I got a very wholesome lesson. I had earned about 10
+dollars beyond my immediate wants, which I invested, by the advice of a
+relative in lottery tickets, all which, fortunately for me, drew blanks. This
+impressed upon me the {\mdseries folly of looking to games of chance} for any
 source of gain or livelihood.''
 
 \item At age 17, he took on an apprenticeship as a coach-maker; he remained in
-this capacity for four years until his employer offered to build him a shop and
-setup a business for him -- a great offer, but in his own words, ``I always had a
-{\fontspec{Gibbs Medium} horror of being burdened with debt}, and having no
-capital of my own, {\fontspec{Gibbs Medium} I declined his kind offer}.''
+this capacity for four years until his employer offered to build him a shop
+and setup a business for him -- a great offer, but in his own words, ``I
+always had a {\mdseries horror of being burdened with debt}, and having no
+capital of my own, {\mdseries I declined his kind offer}.''
 
-\item His first profitable invention was a machine for shearing cloth. His first
-sale of said machine was to Mr. Vassar, the founder of ``the noble institution
-for female education, called the Vassar College.''
+\item His first profitable invention was a machine for shearing cloth. His
+first sale of said machine was to Mr. Vassar, the founder of ``the noble
+institution for female education, called the Vassar College.''
 
 \item Soon afterwards he engaged in business as a grocer. Using the money from
-the grocery and his sale of machines he purchased a {\fontspec{Gibbs Medium}
-glue factory} between 31st
-and 34th streets while {\fontspec{Gibbs Medium} incurring no debt}.
+the grocery and his sale of machines he purchased a {\mdseries glue factory}
+between 31st and 34th streets while {\mdseries incurring no debt}.
+
 \newcounter{enumTemp}
 \setcounter{enumTemp}{\value{enumListi}}
 \end{enumList}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.46\linewidth}
-\fontspec{Gibbs Book}[VerticalPosition=Ordinal,Ligatures={Common,TeX}]
+\fontspec{Gibbs Book}
 \fontsize{10.7pt}{12.7pt}\selectfont
 \raggedright
 \upshape
@@ -91,40 +94,39 @@ and 34th streets while {\fontspec{Gibbs Medium} incurring no debt}.
 \setcounter{enumListi}{\value{enumTemp}}
 
 \item In 1828 he entered into a partnership with two fellows to purchase 3,000
-acres of land in Baltimore for \$105,000. On this land he built the
-{\fontspec{Gibbs Medium} Canton Iron Works}. When purchasing the land, he
-discovered his partners had deceived him in their ability to pay so he bought
-out their stakes and went at the venture alone.
+acres of land in Baltimore for \$105,000. On this land he built the {\mdseries
+Canton Iron Works}. When purchasing the land, he discovered his partners had
+deceived him in their ability to pay so he bought out their stakes and went at
+the venture alone.
 
 \item Also in 1828 (at age 37) he was elected to his first public office, as
-{\fontspec{Gibbs Medium} Assistant Alderman} of the City of New York. His first
-order of business as a public officer was locating a clean source of water
-for the city outside of its limits. His work culminated in the construction of
-the {\fontspec{Gibbs Medium} Croton Aqueduct} and the {\fontspec{Gibbs Medium}
-High Bridge}, the oldest standing bridge in the City of New York.
+{\mdseries Assistant Alderman} of the City of New York. His first order of
+business as a public officer was locating a clean source of water for the city
+outside of its limits. His work culminated in the construction of the
+{\mdseries Croton Aqueduct} and the {\mdseries High Bridge}, the oldest
+standing bridge in the City of New York.
 
-\item During the remainder of his time as an alderman, Peter Cooper participated in other important legislation such as those acts that {\fontspec{Gibbs Medium} allowed the formation of the FDNY and NYPD}.
+\item During the remainder of his time as an alderman, Peter Cooper
+participated in other important legislation such as those acts that {\mdseries
+allowed the formation of the FDNY and NYPD}.
 
-\item Soon after purchasing the Baltimore land, he produced the
-{\fontspec{Gibbs Medium} first steam
-locomotive in the United States}. His locomotive Tom Thumb used his efficient
-invention for ``rotary motion obtained for rectilinear alternating motion,
-without a crank.'' Tom Thumb raced against a horse-drawn train,
-to demonstrate its superior speed. While Tom Thumb broke down during the race,
-its commanding lead up to that point proved its value.
+\item Soon after purchasing the Baltimore land, he produced the {\mdseries
+first steam locomotive in the United States}. His locomotive Tom Thumb used
+his efficient invention for ``rotary motion obtained for rectilinear
+alternating motion, without a crank.'' Tom Thumb raced against a horse-drawn
+train, to demonstrate its superior speed. While Tom Thumb broke down during
+the race, its commanding lead up to that point proved its value.
 
-\item In 1853 he purchased 19,000 acres in Ringwood, New Jersey, which included
-the {\fontspec{Gibbs Medium} Long Pond Ironworks}, which was managed by
-Edward Cooper and Abram S. Hewitt, and {\fontspec{Gibbs Medium} Ringwood Manor}
-which now acts as a museum. Peter Cooper later installed {\fontspec{Gibbs
-Medium} grand arched windows recycled from Cooper Union's Foundation Building}
-at the manor.
+\item In 1853 he purchased 19,000 acres in Ringwood, New Jersey, which
+included the {\mdseries Long Pond Ironworks}, which was managed by Edward
+Cooper and Abram S. Hewitt, and {\mdseries Ringwood Manor} which now acts as a
+museum. Peter Cooper later installed {\mdseries grand arched windows recycled
+from Cooper Union's Foundation Building} at the manor.
 
-\item He founded an ironworks at 33rd St. near 3rd~Ave. which became a
-mill for rolling iron and making wire. Later this factory {\fontspec{Gibbs
-Medium} rolled I-beams}, the first of their kind, to provide structure for
-{\fontspec{Gibbs Medium} Cooper Union's Foundation Building}, making it largely
-{\fontspec{Gibbs Medium} fire-proof}.
+\item He founded an ironworks at 33rd St. near 3rd~Ave. which became a mill
+for rolling iron and making wire. Later this factory {\mdseries rolled
+I-beams}, the first of their kind, to provide structure for {\mdseries Cooper
+Union's Foundation Building}, making it largely {\mdseries fire-proof}.
 
 \setcounter{enumTemp}{\value{enumListi}}
 \end{enumList}
@@ -133,9 +135,9 @@ Medium} rolled I-beams}, the first of their kind, to provide structure for
 
 \fontspec{Gibbs Medium}
 \hfill Over {\addfontfeature{Scale=0.8} →}
-%
+
 \newpage{}
-%
+
 \begin{minipage}[t]{0.46\linewidth}
 \fontspec{Gibbs Book}[VerticalPosition=Ordinal,Ligatures={Common,TeX}]
 \fontsize{11pt}{13pt}\selectfont
@@ -145,56 +147,53 @@ Medium} rolled I-beams}, the first of their kind, to provide structure for
 \setcounter{enumListi}{\value{enumTemp}}
 
 \item He soon created several ironworks in New Jersey which he later
-consolidated into the {\fontspec{Gibbs Medium} Trenton Ironworks}.
+consolidated into the {\mdseries Trenton Ironworks}.
 
-\item He also served as the longtime {\fontspec{Gibbs Medium} head of the Public School Society} which later became of the New York City Board of Education.
+\item He also served as the longtime {\mdseries head of the Public School
+Society} which later became of the New York City Board of Education.
 
 \item In 1857 the New York State Legislature passed an act to give ``corporate
 powers to the Trustees of Peter Cooper's Munificent Gift to Science and Art.''
-This is the first public record of Cooper Union, and in this act Cooper Union is
-declared a {\fontspec{Gibbs Medium} public institution with a board of
-trustees composed of representatives of other public institutions in the City and
-State of New York}, such as the Governor's office, the New-York Historical
-Society, and the Astor Library.
+This is the first public record of Cooper Union, and in this act Cooper Union
+is declared a {\mdseries public institution with a board of trustees composed
+of representatives of other public institutions in the City and State of New
+York}, such as the Governor's office, the New-York Historical Society, and the
+Astor Library.
 
-\item In 1859, Peter Cooper opened The Cooper Union, a {\fontspec{Gibbs Medium}
-free school that admitted all students on the basis of merit alone.}
-\item In 1860, {\fontspec{Gibbs Medium} Abraham Lincoln} delivered his
-{\fontspec{Gibbs Medium}[Ligatures=TeX] ``Right Makes Might''} speech at Cooper
-Union.
-Historians contend that this speech catapulted him to the presidency, and that
-{\fontspec{Gibbs Medium} without Cooper Union, the United States may soon have
-fallen.}
+\item In 1859, Peter Cooper opened The Cooper Union, a {\mdseries free school
+that admitted all students on the basis of merit alone.}
 
-\item Peter Cooper, with Cyrus Field and others, financed and
-pioneered the laying of the {\fontspec{Gibbs Medium} first Transatlantic
-telegraph cable}. Despite several majors setbacks Peter Cooper persevered and
-ultimately it was due to his spirit that the project succeeded.
+\item In 1860, {\mdseries Abraham Lincoln} delivered his {\mdseries ``Right
+Makes Might''} speech at Cooper Union. Historians contend that this speech
+catapulted him to the presidency, and that {\mdseries without Cooper Union,
+the United States may soon have fallen.}
 
-\item In 1876, he was {\fontspec{Gibbs Medium} nominated to run for President of
-the United States} by the Greenback party; Peter Cooper is still the
-{\fontspec{Gibbs Medium} oldest person} nominated for the presidency by a political party.
+\item Peter Cooper, with Cyrus Field and others, financed and pioneered the
+laying of the {\mdseries first Transatlantic telegraph cable}. Despite several
+majors setbacks Peter Cooper persevered and ultimately it was due to his
+spirit that the project succeeded.
+
+\item In 1876, he was {\mdseries nominated to run for President of the United
+States} by the Greenback party; Peter Cooper is still the {\mdseries oldest
+person} nominated for the presidency by a political party.
 
 \item Throughout his later life, Peter Cooper often penned open letters to the
 legislature and other offices of government, including the presidency. Many of
 these letters were compiled by J.D. Zachos in 1877 \cite{opinions}.
 
-\item After his death in the 1883, the New York Times described the
-{\fontspec{Gibbs Medium} thousands of people that paid their respects} both at
-All Souls' Church (estimated at 15,000 people) and an even larger number of
-people that lined the streets along the procession route.
+\item After his death in the 1883, the New York Times described the {\mdseries
+thousands of people that paid their respects} both at All Souls' Church
+(estimated at 15,000 people) and an even larger number of people that lined
+the streets along the procession route.
 
 \item Peter Cooper is buried, with other members of the Cooper-Hewitt family,
-at {\fontspec{Gibbs Medium} Green-Wood Cemetery} in Brooklyn. (Open to vistors)
-
-% He has an isolated plot with the other immediate members of the
-% Cooper-Hewitt family.
+at {\mdseries Green-Wood Cemetery} in Brooklyn. (Open to vistors)
 
 \setcounter{enumTemp}{\value{enumListi}}
 \end{enumList}
 \end{minipage}\hfill
 \begin{minipage}[t]{0.46\linewidth}
-\fontspec{Gibbs Book}[VerticalPosition=Ordinal,Ligatures={TeX,Common}]
+\fontspec{Gibbs Book}
 \fontsize{11pt}{13pt}\selectfont
 \raggedright
 \upshape
@@ -224,9 +223,8 @@ primarily by gravity; used in his various ironworks operations.
 \end{itemize}
 \end{enumList}
 
-% \vspace{0.05in}
-
-\fontspec{Gibbs Book}[Numbers=Monospaced,Ligatures={Common,TeX}]
+\fontspec{Gibbs Book}
+\addfontfeature{Numbers=Monospaced}
 \fontsize{9.5pt}{9.5pt}\selectfont
 \upshape
 \raggedright
@@ -237,7 +235,7 @@ primarily by gravity; used in his various ironworks operations.
 \vspace{0.1in}
 
 \scshape \fontsize{16pt}{16pt}\selectfont \fontspec{Gibbs Black} About
-\fontspec{Gibbs Book}[Numbers=Monospaced]
+\fontspec{Gibbs Book}
 \fontsize{10pt}{10pt}\selectfont
 \upshape
 \raggedright
